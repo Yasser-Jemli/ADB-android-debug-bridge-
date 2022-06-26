@@ -24,7 +24,53 @@ ADB, Android Debug Bridge, is a command-line utility included with Google's Andr
 
 # Package Installation
   
+ <pre>
+ 
 <br />  adb shell install <apk> (install app)
 <br />  adb shell install <path> (install app from phone path)
 <br />  adb shell install -r <path> (install app from phone path)
 <br />  adb shell uninstall <name> (remove the app)
+
+</pre> 
+
+# Paths
+
+<pre> 
+<br /> /data/data/<package>/databases (app databases)
+<br /> /data/data/<package>/shared_prefs/ (shared preferences)
+<br /> /data/app (apk installed by user)
+<br /> /system/app (pre-installed APK files)
+<br /> /mmt/asec (encrypted apps) (App2SD)
+<br /> /mmt/emmc (internal SD Card)
+<br /> /mmt/adcard (external/Internal SD Card)
+<br /> /mmt/adcard/external_sd (external SD Card)
+
+<br /> adb shell ls (list directory contents)
+<br /> adb shell ls -s (print size of each file)
+<br /> adb shell ls -R (list subdirectories recursively)
+</pre>
+
+#  File Operations
+<pre>
+
+<br /> adb push <local> <remote> (copy file/dir to device)
+<br /> adb pull <remote> <local> (copy file/dir from device)
+<br /> run-as <package> cat <file> (access the private package files)
+</pre> 
+
+
+# Phone Info
+<pre>
+<br /> adb get-statе (print device state)
+<br /> adb get-serialno (get the serial number)
+<br /> adb shell dumpsys iphonesybinfo (get the IMEI)
+<br /> adb shell netstat (list TCP connectivity)
+<br /> adb shell pwd (print current working directory)
+<br /> adb shell dumpsys battery (battery status)
+<br /> adb shell pm list features (list phone features)
+<br /> adb shell service list (list all services)
+<br /> adb shell dumpsys activity <package>/<activity> (activity info)
+<br /> adb shell ps (print process status)
+<br /> adb shell wm size (displays the current screen resolution)
+<br /> dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp' (print current app's opened activity)
+</pre>
