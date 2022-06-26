@@ -55,7 +55,7 @@ ADB, Android Debug Bridge, is a command-line utility included with Google's Andr
 
 <br /> adb push <local> <remote> (copy file/dir to device)
 <br /> adb pull <remote> <local> (copy file/dir from device)
-<br /> run-as <package> cat <file> (access the private package files)
+<br /> run-as "<package>" cat "<file>" (access the private package files)
 </pre> 
 
 
