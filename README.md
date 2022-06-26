@@ -8,16 +8,16 @@ ADB, Android Debug Bridge, is a command-line utility included with Google's Andr
 
 # ADB Basics
 
-<br / > adb devices (lists connected devices)
-<br / > adb root (restarts adbd with root permissions)
-<br / > adb start-server (starts the adb server)
-<br / > adb kill-server (kills the adb server)
-<br / > adb reboot (reboots the device)
-<br / > adb devices -l (list of devices by product/model)
-<br / > adb shell (starts the backround terminal)
-<br / > exit (exits the background terminal)
-<br / > adb help (list all commands)
-<br / > adb -s <deviceName> <command> (redirect command to specific device)
-<br / > adb –d <command> (directs command to only attached USB device)
-<br / > adb –e <command> (directs command to only attached emulator)
+<br /> adb devices (lists connected devices)
+<br /> adb root (restarts adbd with root permissions)
+<br /> adb start-server (starts the adb server)
+<br /> adb kill-server (kills the adb server)
+<br /> adb reboot (reboots the device)
+<br /> adb devices -l (list of devices by product/model)
+<br /> adb shell (starts the backround terminal)
+<br /> exit (exits the background terminal)
+<br /> adb help (list all commands)
+<br /> adb -s <deviceName> <command> (redirect command to specific device)
+<br /> adb –d <command> (directs command to only attached USB device)
+<br /> adb –e <command> (directs command to only attached emulator)
 
