@@ -1,7 +1,11 @@
 # ADB-android-debug-bridge-
 
+<pre> 
 
 ![index](https://user-images.githubusercontent.com/92098387/175825784-c2d38156-4e33-494c-b49b-c79465b07912.png)
+
+</pre>
+
 ALL you need to know about adb &amp; all the command that you will be using &amp; some of my experiences with adb
 
 
