@@ -1,15 +1,14 @@
-# ADB-android-debug-bridge-
+# ADB-android-debug-bridge-[Under COnstruction ] 
+
 
 <pre> 
 
 
 
 
-
-
-(https://user-images.githubusercontent.com/92098387/175825784-c2d38156-4e33-494c-b49b-c79465b07912.png
-
-
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/92098387/175825784-c2d38156-4e33-494c-b49b-c79465b07912.png">
+</p>
 
 
 
