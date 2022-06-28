@@ -23,6 +23,12 @@ ALL you need to know about adb &amp; all the command that you will be using &amp
 
 ADB, Android Debug Bridge, is a command-line utility included with Google's Android SDK. ADB can control your device over USB from a computer, copy files back and forth, install and uninstall apps, run shell commands, and more.
 
+ADB commands can be used to debug Android devices, installing or uninstalling apps, and getting information about a connected device. ADB works with the aid of three components called Client, Daemon, and Server. If you are curious about how these 3 components work together to make ADB and ADB shell commands functions, see below:
+
+   * Client: It’s is very computer on which you use a command-line terminal to issue an ADB command. which sends commands.
+   * Daemon: Or, ADBD is a background process that runs on both the connected devices. It’s responsible for running commands on a connected emulator or          Android device.
+   * Server: It runs in the background and works as a bridge between the Client and the Daemon and manages the communication. which manages communication        between the client and the daemon.
+
 
 # ADB Basics
 <pre>
