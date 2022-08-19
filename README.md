@@ -646,3 +646,58 @@ I/MyActivity( 1557): MyClass.getView() — get item number 1
 <br />         "key_refresh": "adb shell input keyevent 285"
      }
 }
+
+
+
+# LOG file Analyse Examples 
+
+<pre>
+
+example on log here:
+
+BT playback on going, Door is opened while Engine OFF:
+
+ 
+
+08-18 17:19:36.608850  1662  1878 I PowerMultiMediaEventController: handleMultiMediaEvent, appHmiState=268435458, vehicleState= 3, micomState=4, driverDoorOpenTriggered=1, mmCustomerActionTriggered=0
+
+=> Media is paused
+
+ 
+
+08-18 17:19:36.609961  6833 32192 W MediaSourceResumeService: MediaSinkAvailable onMute
+08-18 17:19:36.609998  6833 32192 D MediaSourceResumeService: pause controller 
+
+ 
+
+=> Audio bus are disconnected
+
+ 
+
+08-18 17:19:37.044946  1746  1941 W CAR.AUDIO.CONFIGURABLE.ROUTE: Sink Device Port @=BUS00_MEDIA, type=bus not available
+
+ 
+
+=> Connectivity is disabled
+
+ 
+
+08-18 17:19:37.085230  1746  1746 D CAR.AUDIO.CONFIGURABLE.INTERACTIONS: BtActivityListener onReceive intent=Intent { act=android.bluetooth.a2dp-sink.profile.action.CONNECTION_STATE_CHANGED flg=0x4000010 (has extras) }
+08-18 17:19:37.085279  1746  1746 D CAR.AUDIO.CONFIGURABLE.INTERACTIONS: BtActivityListener onReceive connected=false
+
+ 
+
+And strategy applies: BT A2DP is lost, so Radio is started... 
+
+08-18 17:19:37.086641  1746  3626 D CAR.MEDIA: Changing media source to: com.renault.radio
+
+And radio becomes the current media source, after Audio Focus granted
+
+08-18 17:19:37.690666  4052  4052 I RadioPlayer: requestAudioFocus
+
+ 
+
+=> Need that the the current power state/audio state shall be taken into account before CAR.MEDIA applies the source backup to radio strategy.
+
+
+</pre>
